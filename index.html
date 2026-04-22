@@ -109,6 +109,15 @@ nav.scrolled{background:rgba(7,7,16,.92);backdrop-filter:blur(20px);border-botto
 .skill-cat{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.8rem}
 .skill-pills{display:flex;flex-wrap:wrap;gap:.4rem}
 .spill{font-family:var(--mono);font-size:.6rem;padding:.25rem .65rem;background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--text);border-radius:2px}
+.edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.edu-card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:2rem;position:relative;overflow:hidden;transition:all .25s}
+.edu-card::before{content:"";position:absolute;top:0;left:0;bottom:0;width:3px;background:var(--pink2);transform:scaleY(0);transform-origin:top;transition:transform .3s}
+.edu-card:hover{border-color:var(--pink2);transform:translateY(-4px)}
+.edu-card:hover::before{transform:scaleY(1)}
+.edu-year{font-family:var(--mono);font-size:.7rem;color:var(--green);letter-spacing:.08em;margin-bottom:.8rem;display:inline-block;padding:.25rem .6rem;background:rgba(57,217,138,.08);border:1px solid rgba(57,217,138,.2);border-radius:2px}
+.edu-degree{font-family:var(--display);font-size:1.3rem;font-weight:700;color:var(--text);margin-bottom:.4rem;line-height:1.3}
+.edu-school{font-family:var(--mono);font-size:.8rem;color:var(--pink);margin-bottom:1rem}
+.edu-desc{font-size:.85rem;color:var(--muted);line-height:1.7}
 .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
 .proj-card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:2rem;position:relative;overflow:hidden;transition:all .25s}
 .proj-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--pink2),var(--green2));transform:scaleX(0);transform-origin:left;transition:transform .3s}
@@ -160,6 +169,7 @@ footer{border-top:1px solid var(--border);padding:2rem 4rem;display:flex;justify
   .section{padding:4rem 1.5rem}
   .about-grid,.contact-wrapper{grid-template-columns:1fr;gap:2rem}
   .skills-masonry{grid-template-columns:1fr 1fr}
+  .edu-grid{grid-template-columns:1fr}
   .projects-grid{grid-template-columns:1fr}
   .ctf-card{grid-column:span 1;flex-direction:column;gap:1rem}
   footer{flex-direction:column;gap:1rem;padding:1.5rem}
@@ -175,6 +185,7 @@ footer{border-top:1px solid var(--border);padding:2rem 4rem;display:flex;justify
   <ul class="nav-links">
     <li><a href="#about">À propos</a></li>
     <li><a href="#experience">Expérience</a></li>
+    <li><a href="#formation">Formation</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projets</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -318,10 +329,33 @@ footer{border-top:1px solid var(--border);padding:2rem 4rem;display:flex;justify
   </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills" style="padding:7rem 0;background:var(--bg)">
+<!-- FORMATION -->
+<section id="formation" style="padding:7rem 0;background:var(--bg)">
   <div class="section" style="padding-top:0;padding-bottom:0">
-    <div class="section-label" data-num="03 —">Skills</div>
+    <div class="section-label" data-num="03 —">Formation</div>
+    <h2 class="section-title reveal">Parcours académique</h2>
+    <p class="section-sub reveal">Cinq années de formation, de l'informatique générale à la cybersécurité appliquée.</p>
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <span class="edu-year">2024 → 2026</span>
+        <div class="edu-degree">Master Cybersécurité</div>
+        <div class="edu-school">HETIC · Paris</div>
+        <p class="edu-desc">Formation spécialisée en cybersécurité offensive et défensive : gouvernance et conformité (ISO 27001, RGPD), analyse de risques, pentesting, SIEM/SOC, cloud security et infrastructures Cyber Range. Cursus en alternance chez Crédit Agricole Personal Finance &amp; Mobility.</p>
+      </div>
+      <div class="edu-card reveal">
+        <span class="edu-year">2021 → 2024</span>
+        <div class="edu-degree">Licence Informatique Générale</div>
+        <div class="edu-school">Université Paris Cité</div>
+        <p class="edu-desc">Fondamentaux de l'informatique : algorithmique, programmation (C, Java, Python), réseaux, systèmes Unix, bases de données et mathématiques appliquées. Premiers projets réseau et système (Bomberman TCP/UDP, shell interactif).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" style="padding:7rem 0;background:var(--bg2)">
+  <div class="section" style="padding-top:0;padding-bottom:0">
+    <div class="section-label" data-num="04 —">Skills</div>
     <h2 class="section-title reveal">Expertise</h2>
     <p class="section-sub reveal">Gouvernance, risques, conformité et compétences techniques associées.</p>
     <div class="skills-masonry">
@@ -402,9 +436,9 @@ footer{border-top:1px solid var(--border);padding:2rem 4rem;display:flex;justify
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" style="padding:7rem 0;background:var(--bg2)">
+<section id="projects" style="padding:7rem 0;background:var(--bg)">
   <div class="section" style="padding-top:0;padding-bottom:0">
-    <div class="section-label" data-num="04 —">Projets</div>
+    <div class="section-label" data-num="05 —">Projets</div>
     <h2 class="section-title reveal">Ce que j'ai construit</h2>
     <p class="section-sub reveal">Projets techniques personnels et académiques.</p>
     <div class="projects-grid">
@@ -444,9 +478,9 @@ footer{border-top:1px solid var(--border);padding:2rem 4rem;display:flex;justify
 </section>
 
 <!-- CONTACT -->
-<section id="contact" style="padding:7rem 0 4rem;background:var(--bg)">
+<section id="contact" style="padding:7rem 0 4rem;background:var(--bg2)">
   <div class="section" style="padding-top:0;padding-bottom:0">
-    <div class="section-label" data-num="05 —">Contact</div>
+    <div class="section-label" data-num="06 —">Contact</div>
     <div class="contact-wrapper">
       <div class="contact-left reveal">
         <h2>On travaille<br><span>ensemble ?</span></h2>
@@ -478,23 +512,6 @@ footer{border-top:1px solid var(--border);padding:2rem 4rem;display:flex;justify
         </div>
       </div>
       <div class="contact-right reveal">
-        <div class="info-block">
-          <h4>Formation</h4>
-          <div class="info-item">
-            <div>
-              <div class="info-name">Master Cybersécurité</div>
-              <div class="info-sub">HETIC</div>
-            </div>
-            <div class="info-right">2026</div>
-          </div>
-          <div class="info-item">
-            <div>
-              <div class="info-name">Licence Informatique Générale</div>
-              <div class="info-sub">Université Paris Cité</div>
-            </div>
-            <div class="info-right">2024</div>
-          </div>
-        </div>
         <div class="info-block">
           <h4>Langues</h4>
           <div class="lang-row"><span>Français</span><div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div><span class="lang-label">Courant</span></div>
