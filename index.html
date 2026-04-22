@@ -48,6 +48,12 @@ nav.scrolled{background:rgba(7,7,16,.92);backdrop-filter:blur(20px);border-botto
 .btn-main:hover{transform:translateY(-2px)}
 .btn-ghost{font-family:var(--mono);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;padding:.9rem 2.2rem;background:transparent;color:var(--green);border:1px solid var(--green2);border-radius:2px;text-decoration:none;transition:all .2s}
 .btn-ghost:hover{background:rgba(57,217,138,.07);transform:translateY(-2px)}
+.btn-cv{display:inline-flex;align-items:center;gap:.9rem;padding:.8rem 1.8rem .8rem 1.4rem;background:rgba(180,142,255,.06);border:1px solid rgba(180,142,255,.3);border-radius:2px;text-decoration:none;color:var(--text);transition:all .2s;font-family:var(--mono);margin-bottom:2rem}
+.btn-cv:hover{background:rgba(180,142,255,.12);border-color:var(--purple);transform:translateY(-2px)}
+.btn-cv-icon{font-size:1.1rem;color:var(--purple);font-weight:700;line-height:1}
+.btn-cv-text{display:flex;flex-direction:column;gap:.1rem;line-height:1.2}
+.btn-cv-label{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.btn-cv-title{font-size:.75rem;letter-spacing:.08em;color:var(--text)}
 .hero-tags{position:absolute;right:4rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:1rem;opacity:0;animation:fadeUp .6s 1s forwards}
 .htag{font-family:var(--mono);font-size:.65rem;padding:.5rem 1rem;border:1px solid var(--border);color:var(--muted);border-radius:2px;background:var(--surface);letter-spacing:.08em;transition:all .2s}
 .htag:hover,.htag.active{border-color:var(--green2);color:var(--green)}
@@ -445,6 +451,13 @@ footer{border-top:1px solid var(--border);padding:2rem 4rem;display:flex;justify
       <div class="contact-left reveal">
         <h2>On travaille<br><span>ensemble ?</span></h2>
         <p>Disponible pour des opportunités en cybersécurité, des collaborations sur des projets techniques, ou simplement pour échanger sur le domaine.</p>
+        <a href="CV_Leiticia_RAAB_FR.pdf" download class="btn-cv">
+          <span class="btn-cv-icon">↓</span>
+          <span class="btn-cv-text">
+            <span class="btn-cv-label">Télécharger</span>
+            <span class="btn-cv-title">CV · PDF</span>
+          </span>
+        </a>
         <div class="contact-links">
           <a href="mailto:leticiaraab2003@gmail.com" class="clink">
             <i class="clink-icon">✉️</i>
